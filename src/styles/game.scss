@@ -1,0 +1,161 @@
+//Variables
+$backgroundImage: linear-gradient(60deg, #29323c 0%, #485563 100%);
+$darkBackgroundImageColor: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+$uiBackgroundImage: linear-gradient(60deg, #1c2126 0%, #304152 100%);
+$darkFontColor: #202020;
+$lightFontColor: #e6e6e6;
+$borderUi: #859cc7;
+$afacadFont: "Afacad", serif;
+$chakraFont: "Chakra Petch", serif;
+$tekoFont: "Teko", serif;
+$sm: 14px;
+$md: 16px;
+$lg: 22px;
+$slg: 30px;
+$noBold: 400;
+$bold: 600;
+
+//Mixins
+@mixin sizes($width: 100%, $height: 100%){
+    width: $width;
+    height: $height;
+}
+@mixin displayFlex($justifyContent: center, $flexDirection: column){
+    display: flex;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+    align-items: center;
+}
+@mixin fontConfig($textAlign: center, $fontSize: $sm, $fontWeight: $noBold, $fontColor: $darkFontColor){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $fontColor;
+    text-align: $textAlign;
+}
+@mixin buttonDesign($width: 100%, $height: 40px){
+    padding: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: transparent;
+    font-family: $chakraFont;
+    width: $width;
+    height: $height;
+    text-align: center;
+    font-weight: $bold;
+    font-size: $md;
+    color: $lightFontColor;
+    cursor: pointer;
+}
+
+//Generales
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+//Html & Body
+html, body{
+    @include sizes();
+    @include displayFlex($justifyContent:space-between);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background-image: $backgroundImage;
+    font-family: $afacadFont;
+    padding: 5px;
+}
+
+//Nav
+nav{
+    @include sizes($height: 110px);
+    @include displayFlex($justifyContent: space-between);
+
+    ul{
+        @include sizes($height: 50px);
+        @include displayFlex($flexDirection:row, $justifyContent: space-between);
+        background-image: $uiBackgroundImage;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+        padding: 5px;
+        gap: 5px;
+
+        li{
+            @include displayFlex($flexDirection:row, $justifyContent:space-between);
+            @include sizes(200px);
+            cursor: pointer;
+            color: $lightFontColor;
+            transition: all 0.1s ease;
+            overflow: hidden;
+            padding: 5px;
+            font-size: $lg;
+
+            img{
+                @include sizes(auto,100%);
+            }
+        }
+        li:hover{
+            transform: translateY(-5px);
+        }
+    }
+    .logotype{
+        width: 250px;
+        border: 0px;
+    }
+    .logotype:hover{
+        transform: translate(0px);
+    }
+    .gameUi{
+        border-radius: 0px;
+        height: 60px;
+        gap: 5px;
+
+        li{
+            border-radius: 10px;
+            width: 100%;
+            border: 1px solid #51626f;
+        }
+        li:hover{
+            background-image: $backgroundImage;
+        }
+    }
+}
+
+//Main
+main{
+    @include sizes();
+    @include displayFlex();
+
+    //Home view
+    .homeView{
+        @include sizes();
+        @include displayFlex();
+        background-image: url(/src/assets/background/homeBackground.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* background-image: url(/src/assets/background/background-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
