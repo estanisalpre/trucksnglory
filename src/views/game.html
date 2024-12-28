@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trucks 'n' Glory: Game</title>
     <!-- LINK CSS -->
-    <link rel="stylesheet" href="/src/styles/game.css">
+    <link rel="stylesheet" href="/styles/game.css">
     <!-- LINK GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +14,24 @@
 <body>
     <nav>
         <ul>
-            <li class="logotype"><img src="" alt="Trucks 'n' Glory Logotype/Logo"></li>
-            <li><img src="/src/assets/buttons/newsButton.png" alt="">Noticias</li>
-            <li><img src="/src/assets/buttons/achievmentsButton.png" alt="">Objetivos</li>
-            <li><img src="/src/assets/buttons/tutorialButton.png" alt="">Tutorial</li>
-            <li><img src="/src/assets/buttons/rankingButton.png" alt="">Ranking</li>
-            <li><img src="/src/assets/buttons/configButton.png" alt="">Configuración</li>
-            <li><img src="/src/assets/buttons/logoutButton.png" alt="">Salir</li>
+            <li class="logotype"><img src="/assets/img/logotype.png" alt="Trucks 'n' Glory Logotype/Logo"></li>
+            <li><img src="/assets/buttons/newsButton.png" alt="">Noticias</li>
+            <li><img src="/assets/buttons/achievmentsButton.png" alt="">Objetivos</li>
+            <li><img src="/assets/buttons/tutorialButton.png" alt="">Tutorial</li>
+            <li><img src="/assets/buttons/rankingButton.png" alt="">Ranking</li>
+            <li><img src="/assets/buttons/configButton.png" alt="">Configuración</li>
+            <li><img src="/assets/buttons/logoutButton.png" alt="">Salir</li>
         </ul>
         <ul class="gameUi">
-            <li><img src="/src/assets/buttons/companyButton.png" alt="">Compañía</li>
-            <li><img src="/src/assets/buttons/furgonButton.png" alt="">Furgones</li>
-            <li><img src="/src/assets/buttons/truckButton.png" alt="">Camiones</li>
-            <li><img src="/src/assets/buttons/routesButton.png" alt="">Rutas</li>
-            <li><img src="/src/assets/buttons/employeesButton.png" alt="">Empleados</li>
-            <li><img src="/src/assets/buttons/garageButton.png" alt="">Garage</li>
-            <li><img src="/src/assets/buttons/maintenanceButton.png" alt="">Mantenimiento</li>
-            <li><img src="/src/assets/buttons/mapButton.png" alt="">Mapa</li>
+            <li><img src="/assets/buttons/companyButton.png" alt="">Compañía</li>
+            <li><img src="/assets/buttons/storeButton.png" alt="">Consecionario</li>
+            <li><img src="/assets/buttons/furgonButton.png" alt="">Furgones</li>
+            <li><img src="/assets/buttons/truckButton.png" alt="">Camiones</li>
+            <li><img src="/assets/buttons/routesButton.png" alt="">Rutas</li>
+            <li><img src="/assets/buttons/employeesButton.png" alt="">Empleados</li>
+            <li><img src="/assets/buttons/garageButton.png" alt="">Garage</li>
+            <li><img src="/assets/buttons/maintenanceButton.png" alt="">Mantenimiento</li>
+            <li><img src="/assets/buttons/mapButton.png" alt="">Mapa</li>
         </ul>
     </nav>
     <main>
@@ -44,6 +45,7 @@
         <section class="configView"></section>
         <section class="logoutView"></section>
         <section class="profileView"></section>
+        <section class="storeView"></section>
         <section class="furgonView"></section>
         <section class="trucksView"></section>
         <section class="routesView"></section>
@@ -52,5 +54,7 @@
         <section class="maintenanceView"></section>
         <section class="mapView"></section>
     </main>
+    <!-- SCRIPTS -->
+    <script type="module" src="/src/app.js"></script>
 </body>
 </html>

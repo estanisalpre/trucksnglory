@@ -1,0 +1,187 @@
+//Variables
+$backgroundImage: linear-gradient(60deg, #29323c 0%, #485563 100%);
+$darkBackgroundImageColor: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+$uiBackgroundImage: linear-gradient(60deg, #1c2126 0%, #304152 100%);
+$darkFontColor: #202020;
+$lightFontColor: #e6e6e6;
+$borderUi: #859cc7;
+$afacadFont: "Afacad", serif;
+$chakraFont: "Chakra Petch", serif;
+$tekoFont: "Teko", serif;
+$sm: 14px;
+$md: 16px;
+$lg: 22px;
+$slg: 30px;
+$noBold: 400;
+$bold: 600;
+$shadow: #424242;
+
+//Mixins
+@mixin sizes($width: 100%, $height: 100%){
+    width: $width;
+    height: $height;
+}
+@mixin displayFlex($justifyContent: center, $flexDirection: column){
+    display: flex;
+    justify-content: $justifyContent;
+    flex-direction: $flexDirection;
+    align-items: center;
+}
+@mixin fontConfig($textAlign: center, $fontSize: $sm, $fontWeight: $noBold, $fontColor: $darkFontColor){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $fontColor;
+    text-align: $textAlign;
+}
+@mixin buttonDesign($width: 100%, $height: 40px){
+    padding: 5px;
+    border: 1px solid rgb(160, 160, 160);
+    background-color: transparent;
+    font-family: $afacadFont;
+    width: $width;
+    height: $height;
+    text-align: center;
+    font-weight: $bold;
+    font-size: $md;
+    color: $lightFontColor;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+//Generales
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+//Html & Body
+html, body{
+    @include sizes();
+    @include displayFlex($justifyContent:space-between);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background-image: $backgroundImage;
+    font-family: $afacadFont;
+}
+
+//Main
+main{
+    @include sizes();
+    @include displayFlex($justifyContent: space-between, $flexDirection:row);
+
+    section{
+        @include sizes(50%,90%);
+        @include displayFlex();
+        padding: 25px;
+        gap: 50px;
+
+        div{
+            @include displayFlex();
+            gap: 25px;
+            @include sizes();
+            background-image: $uiBackgroundImage;
+            border-radius: 20px;
+            img{
+                @include sizes(90%,auto);
+            }
+            h1{
+                margin-top: -100px;
+                @include sizes(80%,100px);
+                font-size: 40px;
+                background-color: $lightFontColor;
+                @include displayFlex();
+                box-shadow: 0px 0px 10px 1px $shadow;
+                border-radius: 20px;
+                text-align: center;
+                padding: 10px;
+            }
+            h2{
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                color: $darkFontColor;
+                @include displayFlex();
+                @include sizes(50%,60px);
+                background-color: $lightFontColor;
+                font-size: $slg;
+            }
+            p{
+                @include sizes(80%,auto);
+                @include displayFlex($flexDirection:row);
+                color: $lightFontColor;
+                font-size: $lg;
+                align-items: flex-start;
+                gap: 10px;
+                
+                span{
+                    color: #66ff82;
+                    cursor: pointer;
+                }
+            }
+            .finalPIntro{
+                background-color: $lightFontColor;
+                color: $darkFontColor;
+                border-radius: 20px;
+                padding-left: 25px;
+                font-weight: $bold;
+            }
+        }
+        .logo{
+            background-image: none;
+        }
+        .register, .login{
+            justify-content: space-between;
+            padding-bottom: 25px;
+            @include sizes(400px,500px);
+
+            form{
+                @include sizes(80%);
+                @include displayFlex();
+                gap: 5px;
+
+                input{
+                    @include sizes($height: 50px);
+                    padding-left: 10px;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                }
+                input::placeholder{
+                    font-family: $afacadFont;
+                    font-size: $md;
+                }
+                button{
+                    @include buttonDesign();
+                }
+            }
+        }
+        .login{
+            display: flex;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* background-image: url(/src/assets/background/background-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}

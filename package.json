@@ -1,0 +1,21 @@
+{
+  "name": "trucksnglory",
+  "version": "1.0.0",
+  "description": "A truck manager game with Javascript, Node and MySql",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-myconnection": "^1.0.4",
+    "mysql": "^2.18.1",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trucks 'n' Glory</title>
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="/styles/index.css">
+    <!-- LINK GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="logoSection">
+            <div class="logo">
+                <img src="/assets/img/logotype.png" alt="Game logotype: Trucks 'n' Glory Logo">
+            </div>
+            <div>
+                <h1>Crea un imperio del transporte desde cero, <br> y compite en un ranking mundial</h1>
+                <p>En 'Trucks 'n' Glory' podrás crear tu imperio del transporte sobre carretera, con unas mecánicas pensadas para desafiarte. <br> <br>
+                   No sólo tendrás que entregar la mercancía a tiempo, sino que estarás pendiente a los precios de combustible, la competencia y el mantenimiento correcto de tu vehículo.
+                </p>
+                <p class="finalPIntro">Comienza ahora mismo registrándote en el formulario a tu derecha.</p>
+            </div>
+        </section>
+        <section class="loginRegSection">
+            <div class="login">
+                <h2>Inicia sesión</h2>
+                <form action="/login" method="POST">
+                    <input type="email" name="email" id="email" required placeholder="Correo electrónico">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña">
+                    <button type="submit">Ingresar</button>
+                </form>
+                <p>¿Aún no tienes cuenta? <span>¡Regístrate!</span></p>
+            </div>
+            <div class="register">
+                <h2>Regístrate</h2>
+                <form action="/register" method="POST">
+                    <input type="text" name="username" id="username" required placeholder="Tu nombre">
+                    <input type="email" name="email" id="email" required placeholder="Correo electrónico">
+                    <input type="password" name="password" id="password" required placeholder="Contraseña">
+                    <button type="submit">Registrarme</button>
+                </form>
+                <p>¿Ya tienes cuenta? <span>¡Inicia sesión!</span></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- SCRIPTS -->
+     <script type="module" src=""></script>
+</body>
+</html>

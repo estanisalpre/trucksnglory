@@ -72,7 +72,7 @@ nav{
     @include displayFlex($justifyContent: space-between);
 
     ul{
-        @include sizes($height: 50px);
+        @include sizes($height: 80px);
         @include displayFlex($flexDirection:row, $justifyContent: space-between);
         background-image: $uiBackgroundImage;
         border-top-left-radius: 20px;
@@ -102,6 +102,10 @@ nav{
     .logotype{
         width: 250px;
         border: 0px;
+
+        img{
+            @include sizes();
+        }
     }
     .logotype:hover{
         transform: translate(0px);
